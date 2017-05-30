@@ -1,0 +1,21 @@
+nav {
+    /*margin-bottom: 70px;*/
+}
+.form-group {
+    min-height: 40px;
+}
+#vote-console {
+    background: #000000;
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-size: 12px;
+    padding: 5px;
+}
+#vote-console p {
+    margin: 0;
+}
+.console-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

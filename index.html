@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delegate Voter</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Name and responsive toggle -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                Delegate voter
+            </a>
+        </div>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="version"></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+<div class="container voting" style="margin-top: 70px;">
+    <h2>Vote form (testnet)</h2>
+    <p>Use this tool at your own risk. Stuff can break and you can loose LSK. This tool is hosted for you, but we advise you to download the files and run it on your own.</p>
+    <form id="vote-form">
+        <fieldset>
+            <div class="form-group">
+                <label for="inputPassphrase" class="col-lg-2 control-label">Passphrase</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputPassphrase" placeholder="Passphrase" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassphrase2" class="col-lg-2 control-label">Secondary passphrase (optional)</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputPassphrase2" placeholder="Secondary passphrase">
+                    <span class="help-block">If you have a secondary passhrase enabled, fill this in.</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="list-of-votes" class="col-lg-2 control-label">List of votes</label>
+                <div class="col-lg-10">
+                    <textarea class="form-control" rows="10" id="list-of-votes"
+                              placeholder="max&#xA;oliver&#xA;liskfaucets"></textarea>
+                    <span class="help-block">Add delegates you want to vote for per line.</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <p class="col-lg-2 control-label"></p>
+                <div class="col-lg-10">
+                    <input type="checkbox" id="checkbox-author"> <label for="checkbox-author" class="control-label"
+                                                                 style="font-weight: 400;">Add 'liskfaucets' to your
+                    list (the creator of this tool)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                    <button type="button" class="btn btn-info" onclick="$('.console').show();$('.voting').hide();">Show console</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="container console" style="margin-top: 70px; display:none;">
+    <h2>Console</h2> <button type="button" class="btn btn-info pull-right console-button" onclick="$('.console').hide();$('.voting').show();">Show form</button>
+
+    <div id="vote-console">
+        <p>Console generated</p>
+        <p>Waiting for input...</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
